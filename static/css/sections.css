@@ -1,0 +1,121 @@
+/* About Section */
+.about-section {
+    padding: 2rem;
+}
+
+.about-image-container {
+    width: 40%;
+}
+
+.about-image-container img {
+    width: 60%;
+}
+
+.about-description-container {
+    width: 60%;
+}
+
+.tags-container {
+    width: 50%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.about-description-container p {
+    width: 80%;
+    margin: 2rem 0px;
+}
+
+/* Project Section */
+.project-section {
+    padding: 2rem;
+    background-color: var(--secondary-color-900);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 1%;
+}
+
+.project-card {
+    width: 25rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    border-radius: 1%;
+    border: solid 1px var(--secondary-color-900);
+}
+
+.project-card:hover {
+    opacity: 0.5;
+    border: 1px solid var(--secondary-color);
+}
+
+.skill-container {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0.5rem 0px;
+}
+
+a p:nth-child(2) {
+    font-weight: bolder;
+    font-size: 1.1rem;
+    margin: 0.5rem 0px;
+}
+
+/* Description: 
+    italic */
+a p:nth-child(3){
+    font-style: italic;
+}
+
+
+/* Year:
+    italic
+    bolder
+    letter-spacing: 0.2rem
+    margin-top: 0.5rem*/
+a p:nth-child(4) {
+    font-style: italic;
+    letter-spacing: 0.2rem;
+    margin-top: 0.5rem;
+    font-weight: bolder;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 4rem;
+    margin-top: 2rem;
+}
+
+.add-project-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1% 2%;
+}
+
+
+/* Contact */
+
+#emailForm, #projectForm {
+    display: flex;
+    flex-direction: column;
+    height: 35rem;
+    width: 35rem;
+    justify-content: space-evenly;
+    margin-top: 4rem;
+    padding: 0px 2%;
+    border: solid 1px var(--secondary-color);
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

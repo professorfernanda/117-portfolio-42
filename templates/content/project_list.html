@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Projects {% endblock title %}
+{% load static %}
+
+
+{% block content %}
+
+<section class="project-section center-column">
+
+    {% if user.is_authenticated %}
+        <div class="add-project-container">
+            <a href="{% url 'project_new' %}">
+                <button class="primary-button">Add Project</button>
+            </a>
+            </div>
+    {% endif %}
+
+    <h2>Projects</h2>
+
+    <div class="project-list">
+        <!-- All the project cards --> 
+
+        {% for project in projects %}
+            <div class="project-card">
+
+                <a href="{{ project.repository }}" target="_blank">
+                    <!-- Project Information -->
+
+                    <img src="{{ project.image }}">
+
+                    <p>{{ project.name }}</p>
+                    <p>{{ project.description }}</p>
+                    <p>{{ project.year }}</p>
+
+                    <div class="skill-container center-row">
+                        {% for skill in project.skill.all %}
+                            <label for="" class="label-text">{{ skill.name }}</label>
+                        {% endfor %}
+                    </div>
+
+                </a>
+
+            </div> <!-- End of project-card -->
+        {% endfor %}
+
+    </div> <!-- End of project-list -->
+
+</section>
+
+{% endblock content %}

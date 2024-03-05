@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=h2, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Lobster&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static './css/base.css' %}">
+  <link rel="stylesheet" href="{% static './css/header.css' %}">
+  <link rel="stylesheet" href="{% static './css/sections.css' %}">
+  <link rel="stylesheet" href="{% static './css/footer.css' %}">
+  <link rel="stylesheet" href="{% static './css/responsive.css' %}">
+
+  <title>{% block title %}{% endblock title %}</title>
+</head>
+
+<body>
+
+  <header class="center-row">
+
+    <!--Left Side-->
+    <div class="logo center-row">
+      <a href="{% url 'about' %}">
+        <h2>Name</h2>
+      </a>
+    </div>
+
+    <!--Right Side-->
+    <nav class="center-row">
+
+      <!-- Hamburger button -->
+      <input type="checkbox" id="nav-check">
+
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <!-- Menu Links-->
+      <div class="nav-link center-row">
+        <a href="{% url 'about' %}">About Me</a>
+        <a href="{% url 'project_list' %}">Projects</a>
+        <a href="">Experience</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </div>
+
+    </nav>
+
+  </header>
+
+  {% block content %} {% endblock content %}
+
+  <footer>
+
+    <a href="{% url 'about' %}">
+      <h2>my name</h2>
+    </a>
+
+    <nav class="nav-footer center-row">
+      <a href="{% url 'about' %}">About Me</a>
+      <a href="{% url 'project_list' %}">Projects</a>
+      <a href="">Experience</a>
+      <a href="{% url 'contact' %}">Contact</a>
+    </nav>
+
+  </footer>
+</body>
+
+</html>
